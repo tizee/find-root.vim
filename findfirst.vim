@@ -2,7 +2,7 @@ let s:is_win = has('win32') || has('win64')
 let s:path_sep = s:is_win ? '\' : '/' 
 
 " vim pattern
-function! findroot#window(pattern)
+function! findfirst#find(pattern)
   if exists("*readdir") || has("patch-8.1.1120") " vim support readdir
     let l:cwd = split(expand("%:p:h"),s:path_sep)
     while len(l:cwd) > 1

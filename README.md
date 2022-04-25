@@ -1,20 +1,22 @@
-# find-root.vim
+# findfirst.vim
 
-Find the first matched file up to / in Unix-like system.
+Find the first matched file path until reached root which is `\` in Unix-like system.
 
 No dependency required.
 
 ## Usage
 
 ```
-function! g:FindRootWindow(pattern) " -> v:string
+" return: path to file
+function! g:FindFirst(pattern) " -> v:string
 ```
 
 ```vimscript
-call FindRootWindow("Cargo.toml")
-call FindRootWindow("package.json")
-call FindRootWindow("^README.*$")
-call FindRootWindow(".*\.md")
-call FindRootWindow(".editorconfig")
-call FindRootWindow(".git$")
+" find path
+call FindFirst("Cargo.toml")
+call FindFirst("package.json")
+call FindFirst("^README.*$")
+call FindFirst(".*\.md")
+call FindFirst(".editorconfig")
+call FindFirst(".git$")
 ```
